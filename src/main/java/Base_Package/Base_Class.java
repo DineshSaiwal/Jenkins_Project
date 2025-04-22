@@ -37,7 +37,7 @@ public class Base_Class {
 
 		@BeforeClass
 	@Parameters({"Browser_Name", "url"})
-	public void setUp() {
+	public void setUp() throws IOException{
 	   ChromeOptions options = new ChromeOptions();
 	    String userDataDir = System.getProperty("user.dir") + "/chrome_user_data_" + System.currentTimeMillis();
 	    Files.createDirectories(Paths.get(userDataDir)); // Ensure directory exists
