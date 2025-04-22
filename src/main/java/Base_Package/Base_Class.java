@@ -21,7 +21,7 @@ public class Base_Class {
 	public static ExtentReports extent;
 	ExtentSparkReporter sparkReporter;  
 	public WebDriver driver;
-	//public static  String userdir = System.getProperty("user.dir");
+	public static  String userdir = System.getProperty("user.dir");
 //======================================={Browser Initialization}===============================================
 	
 	@BeforeSuite
