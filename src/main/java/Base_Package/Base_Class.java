@@ -2,6 +2,8 @@ package Base_Package;
 
 import java.awt.Desktop;
 import java.io.File;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.io.IOException;
 import java.time.Duration;
 import org.openqa.selenium.WebDriver;
@@ -37,7 +39,8 @@ public class Base_Class {
 	@Parameters({"Browser_Name", "url"})
 	public void setUp() {
 	   ChromeOptions options = new ChromeOptions();
-		    String userDataDir = System.getProperty("user.dir") + "/chrome_user_data_" + System.currentTimeMillis();
+	    String userDataDir = System.getProperty("user.dir") + "/chrome_user_data_" + System.currentTimeMillis();
+	    Files.createDirectories(Paths.get(userDataDir)); // Ensure directory exists
 
 	     options.addArguments("user-data-dir=" + userDataDir);
 	     driver = new ChromeDriver(options);
