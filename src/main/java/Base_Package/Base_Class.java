@@ -31,7 +31,8 @@ public class Base_Class {
 	    extent.setSystemInfo("Environment", "LOCAL");
 	}
 	
-	@BeforeClass
+	@BeforeClass 
+	@Parameters({"url"})
 	public void setUp(String url) throws IOException{
 	    ChromeOptions options = new ChromeOptions();
 	    String userDataDir = System.getProperty("user.dir") + "/chrome_user_data_" + System.currentTimeMillis();
@@ -50,7 +51,7 @@ public class Base_Class {
 	    driver = new ChromeDriver(options);
 	    driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 	    driver.manage().window().maximize();
-	      driver.get("https://practicetestautomation.com/practice-test-login/");
+	      driver.get(url);
 	}
 		
 	@AfterSuite
