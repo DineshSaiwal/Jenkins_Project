@@ -39,10 +39,11 @@ public class Base_Class {
 	@Parameters({"Browser_Name", "url"})
 	public void setUp() throws IOException{
 	   ChromeOptions options = new ChromeOptions();
-	    String userDataDir = System.getProperty("user.dir") + "/chrome_user_data_" + System.currentTimeMillis();
-	    Files.createDirectories(Paths.get(userDataDir)); // Ensure directory exists
-
-	     options.addArguments("user-data-dir=" + userDataDir);
+	 //   String userDataDir = System.getProperty("user.dir") + "/chrome_user_data_" + System.currentTimeMillis();
+	 //   Files.createDirectories(Paths.get(userDataDir)); // Ensure directory exists
+		options.addArguments("--headless");
+		options.addArguments("--no-sandbox"); 
+	     	options.addArguments("user-data-dir=" + userDataDir);
 	     driver = new ChromeDriver(options);
 	        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 	        driver.manage().window().maximize();
