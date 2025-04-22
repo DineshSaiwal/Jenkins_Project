@@ -2,24 +2,31 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-04-21T15:34:21 IST" name="Suite" finished-at="2025-04-21T15:34:27 IST" duration-ms="5924">
+  <suite started-at="2025-04-22T17:33:35 IST" name="Suite" finished-at="2025-04-22T17:33:41 IST" duration-ms="6271">
     <groups>
     </groups>
-    <test started-at="2025-04-21T15:34:21 IST" name="Jenkins Test" finished-at="2025-04-21T15:34:27 IST" duration-ms="5924">
+    <test started-at="2025-04-22T17:33:35 IST" name="Jenkins Test" finished-at="2025-04-22T17:33:41 IST" duration-ms="6271">
       <class name="Test_Package.Login">
-        <test-method is-config="true" signature="generateReport()[pri:0, instance:Test_Package.Login@35ef1869]" started-at="2025-04-21T15:34:21 IST" name="generateReport" finished-at="2025-04-21T15:34:21 IST" duration-ms="186" status="PASS">
+        <test-method is-config="true" signature="generateReport()[pri:0, instance:Test_Package.Login@72057ecf]" started-at="2025-04-22T17:33:35 IST" name="generateReport" finished-at="2025-04-22T17:33:35 IST" duration-ms="187" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- generateReport -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:Test_Package.Login@35ef1869]" started-at="2025-04-21T15:34:21 IST" name="setUp" finished-at="2025-04-21T15:34:25 IST" duration-ms="3753" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:Test_Package.Login@72057ecf]" started-at="2025-04-22T17:33:35 IST" name="setUp" finished-at="2025-04-22T17:33:39 IST" duration-ms="4136" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[https://practicetestautomation.com/practice-test-login/]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="Test_Login()[pri:0, instance:Test_Package.Login@35ef1869]" started-at="2025-04-21T15:34:25 IST" name="Test_Login" finished-at="2025-04-21T15:34:27 IST" duration-ms="2158" status="PASS">
+        <test-method signature="Test_Login()[pri:0, instance:Test_Package.Login@72057ecf]" started-at="2025-04-22T17:33:39 IST" name="Test_Login" finished-at="2025-04-22T17:33:41 IST" duration-ms="2121" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Test_Login -->
-        <test-method is-config="true" signature="Close_Browser()[pri:0, instance:Test_Package.Login@35ef1869]" started-at="2025-04-21T15:34:27 IST" name="Close_Browser" finished-at="2025-04-21T15:34:28 IST" duration-ms="734" status="PASS">
+        <test-method is-config="true" signature="Close_Browser()[pri:0, instance:Test_Package.Login@72057ecf]" started-at="2025-04-22T17:33:41 IST" name="Close_Browser" finished-at="2025-04-22T17:33:43 IST" duration-ms="1060" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Close_Browser -->

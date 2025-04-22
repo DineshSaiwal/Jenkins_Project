@@ -4,6 +4,8 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.io.IOException;
 import java.time.Duration;
+
+import org.apache.commons.mail.EmailException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -55,11 +57,12 @@ public class Base_Class {
 	}
 		
 	@AfterSuite
-	public void Close_Browser() {
+	public void Close_Browser() throws EmailException {
 		extent.flush();
 		if (driver != null) {
 			driver.quit();
 		}
+		Java_Mail.sendmail();   
 		System.out.println("Report generated at: " + userdir + "/Reports/Automation_Report.html");
 	}
 }

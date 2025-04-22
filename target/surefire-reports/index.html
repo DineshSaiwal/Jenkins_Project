@@ -144,6 +144,7 @@
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite name=&quot;Suite&quot; guice-stage=&quot;DEVELOPMENT&quot; verbose=&quot;0&quot;&gt;
+  &lt;parameter name=&quot;url&quot; value=&quot;https://practicetestautomation.com/practice-test-login/&quot;/&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Jenkins Test&quot; verbose=&quot;0&quot;&gt;
     &lt;classes&gt;
       &lt;class name=&quot;Test_Package.Login&quot;/&gt;
@@ -190,7 +191,7 @@ data.addRows(1);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'Test_Login')
 data.setCell(0, 2, 'Test_Package.Login')
-data.setCell(0, 3, 2158);
+data.setCell(0, 3, 2121);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
@@ -227,16 +228,16 @@ return data;
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-suite before -->
               <div class="configuration-class before">
-                <span class="method-name">setUp</span>
-                <span class="method-start">192 ms</span>
+                <span class="method-name">setUp(https://practicetestautomation.com/practice-test-login/)</span>
+                <span class="method-start">193 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">Test_Login</span>
-                <span class="method-start">3950 ms</span>
+                <span class="method-start">4335 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-suite after">
                 <span class="method-name">Close_Browser</span>
-                <span class="method-start">6122 ms</span>
+                <span class="method-start">6486 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
