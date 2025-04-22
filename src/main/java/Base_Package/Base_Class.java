@@ -21,7 +21,7 @@ public class Base_Class {
 	public static ExtentReports extent;
 	ExtentSparkReporter sparkReporter;  
 	public WebDriver driver;
-	public static  String userdir = System.getProperty("user.dir");
+	//public static  String userdir = System.getProperty("user.dir");
 //======================================={Browser Initialization}===============================================
 	
 	@BeforeSuite
@@ -39,8 +39,8 @@ public class Base_Class {
 	@Parameters({"Browser_Name", "url"})
 	public void setUp() throws IOException{
 	   ChromeOptions options = new ChromeOptions();
-	 //   String userDataDir = System.getProperty("user.dir") + "/chrome_user_data_" + System.currentTimeMillis();
-	 //   Files.createDirectories(Paths.get(userDataDir)); // Ensure directory exists
+	    String userDataDir = System.getProperty("user.dir") + "/chrome_user_data_" + System.currentTimeMillis();
+	    Files.createDirectories(Paths.get(userDataDir)); // Ensure directory exists
 		options.addArguments("--headless");
 		options.addArguments("--no-sandbox"); 
 	     	options.addArguments("user-data-dir=" + userDataDir);
