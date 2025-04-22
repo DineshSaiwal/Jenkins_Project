@@ -18,12 +18,12 @@ public class Login extends Base_Class{
 		Login_Page pg=new Login_Page( driver);
 		test = extent.createTest("This is a test project").assignAuthor("Dinesh_Saiwal").assignCategory("Regression");
 		
-	Thread.sleep(1000);
-	pg.EnterUN();
-	test.pass(MarkupHelper.createLabel("Entered UN", ExtentColor.GREEN));
-	Thread.sleep(1000);
-	pg.Password();
-	test.pass(MarkupHelper.createLabel("Entered PWD", ExtentColor.GREEN));	}
+		Thread.sleep(1000);
+		pg.EnterUN();
+		test.pass(MarkupHelper.createLabel("Entered UN", ExtentColor.GREEN));
+		Thread.sleep(1000);
+		pg.Password();
+		test.pass(MarkupHelper.createLabel("Entered PWD", ExtentColor.GREEN));	}
 
 	
 	

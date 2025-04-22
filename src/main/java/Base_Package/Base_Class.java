@@ -23,7 +23,7 @@ public class Base_Class {
 	
 	@BeforeSuite
 	public void generateReport() throws IOException{
-		sparkReporter =new ExtentSparkReporter("Automation_Report.html");
+		sparkReporter =new ExtentSparkReporter("Reports\\Automation_Report.html");
 		sparkReporter.loadXMLConfig(new File(userdir+"\\extentconfig.xml"));
 		extent = new ExtentReports();
 	    extent.attachReporter(sparkReporter);	
@@ -53,7 +53,7 @@ public class Base_Class {
 		public void Close_Browser() throws IOException {
 			extent.flush();
 			driver.quit();
-			Desktop.getDesktop().browse(new File("Automation_Report.html").toURI());
+			Desktop.getDesktop().browse(new File("Reports\\Automation_Report.html").toURI());
 
 			
 		}
