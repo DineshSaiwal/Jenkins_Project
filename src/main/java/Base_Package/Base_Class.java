@@ -1,6 +1,4 @@
 package Base_Package;
-
-import java.awt.Desktop;
 import java.io.File;
 import java.nio.file.Files;
 import java.nio.file.Paths;
@@ -13,67 +11,54 @@ import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Parameters;
-
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
+
 public class Base_Class {
 	
 	public static ExtentReports extent;
 	ExtentSparkReporter sparkReporter;  
 	public WebDriver driver;
-	public static  String userdir = System.getProperty("user.dir");
-//======================================={Browser Initialization}===============================================
+	public static String userdir = System.getProperty("user.dir");
 	
 	@BeforeSuite
 	public void generateReport() throws IOException{
-		sparkReporter =new ExtentSparkReporter("Reports/Automation_Report.html");
+		sparkReporter = new ExtentSparkReporter("Reports/Automation_Report.html");
 		sparkReporter.loadXMLConfig(new File(userdir + "/extentconfig.xml"));
 		extent = new ExtentReports();
 	    extent.attachReporter(sparkReporter);	
 	    extent.setSystemInfo("Project_Name", "Test Project");
-	    extent.setSystemInfo("Environment", "LOCAl");}
+	    extent.setSystemInfo("Environment", "LOCAL");
+	}
 	
-
-
-		@BeforeClass
-	@Parameters({"Browser_Name", "url"})
-	public void setUp() throws IOException{
-	   ChromeOptions options = new ChromeOptions();
+	@BeforeClass
+	@Parameters({"url"})
+	public void setUp(String url) throws IOException{
+	    ChromeOptions options = new ChromeOptions();
 	    String userDataDir = System.getProperty("user.dir") + "/chrome_user_data_" + System.currentTimeMillis();
 	    Files.createDirectories(Paths.get(userDataDir)); // Ensure directory exists
-		options.addArguments("--headless");
-		options.addArguments("--no-sandbox"); 
-	     	options.addArguments("user-data-dir=" + userDataDir);
-	     driver = new ChromeDriver(options);
-	        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-	        driver.manage().window().maximize();
-	        driver.get("https://practicetestautomation.com/practice-test-login/");
-	        }
-	
-	
-//	@BeforeClass
-//		@Parameters({"Browser_Name", "url"})
-//		public void setUp() {
-//		driver = new ChromeDriver();
-//		        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-//		        driver.manage().window().maximize();
-//		        driver.get("https://practicetestautomation.com/practice-test-login/");
-//		}
-//	
-	
 		
-		@AfterSuite
-		public void Close_Browser() throws IOException {
-			extent.flush();
-			driver.quit();
-			Desktop.getDesktop().browse(new File(userdir + "/Reports/Automation_Report.html").toURI());
-
-			
-		}
+		// Additional options required for Linux/Ubuntu environments
+		options.addArguments("--headless=new");
+		options.addArguments("--no-sandbox");
+		options.addArguments("--disable-dev-shm-usage");
+		options.addArguments("--disable-gpu");
+		options.addArguments("user-data-dir=" + userDataDir);
 		
+		// Setting browser binary path explicitly might be needed on Jenkins
+		// options.setBinary("/path/to/chrome-binary"); // Uncomment and set if needed
 		
+	    driver = new ChromeDriver(options);
+	    driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+	    driver.manage().window().maximize();
+	    driver.get(url);
+	}
 		
-
-
-
+	@AfterSuite
+	public void Close_Browser() {
+		extent.flush();
+		driver.quit();
+		// Remove desktop browser launch - doesn't work in headless environment
+		System.out.println("Report generated at: " + userdir + "/Reports/Automation_Report.html");
+	}
 }
