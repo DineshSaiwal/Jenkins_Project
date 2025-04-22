@@ -37,7 +37,8 @@ public class Base_Class {
 	@Parameters({"Browser_Name", "url"})
 	public void setUp() {
 	   ChromeOptions options = new ChromeOptions();
-		String userDataDir = userdir + "/chromeUserData";
+		    String userDataDir = System.getProperty("user.dir") + "/chrome_user_data_" + System.currentTimeMillis();
+
 	     options.addArguments("user-data-dir=" + userDataDir);
 	     driver = new ChromeDriver(options);
 	        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
