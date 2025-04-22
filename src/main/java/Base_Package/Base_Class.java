@@ -56,8 +56,9 @@ public class Base_Class {
 	@AfterSuite
 	public void Close_Browser() {
 		extent.flush();
-		driver.quit();
-		// Remove desktop browser launch - doesn't work in headless environment
+		if (driver != null) {
+			driver.quit();
+		}
 		System.out.println("Report generated at: " + userdir + "/Reports/Automation_Report.html");
 	}
 }
