@@ -32,7 +32,6 @@ public class Base_Class {
 	}
 	
 	@BeforeClass
-	  @Parameters({"Browser_Name", "url"})
 	public void setUp(String url) throws IOException{
 	    ChromeOptions options = new ChromeOptions();
 	    String userDataDir = System.getProperty("user.dir") + "/chrome_user_data_" + System.currentTimeMillis();
