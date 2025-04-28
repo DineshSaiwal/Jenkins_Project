@@ -1,0 +1,5 @@
+[28964:30828:0428/124354.668:INFO:chrome_browser_cloud_management_controller.cc(202)] No machine level policy manager exists.
+[28964:30828:0428/124356.846:INFO:CONSOLE(2)] "JQMIGRATE: Migrate is installed, version 3.4.1", source: https://practicetestautomation.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1 (2)
+[28964:30828:0428/124356.909:INFO:CONSOLE(0)] "[DOM] Password field is not contained in a form: (More info: https://goo.gl/9p2vKq) %o", source: https://practicetestautomation.com/practice-test-login/ (0)
+[26684:30628:0428/124359.589:WARNING:sqlite_persistent_store_backend_base.cc(176)] Failed to post task from FlushAndNotifyInBackground@net\extras\sqlite\sqlite_persistent_store_backend_base.cc:226 to client_task_runner_.
+[26684:30628:0428/124359.589:WARNING:sqlite_persistent_store_backend_base.cc(176)] Failed to post task from FlushAndNotifyInBackground@net\extras\sqlite\sqlite_persistent_store_backend_base.cc:226 to client_task_runner_.

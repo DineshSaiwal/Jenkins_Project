@@ -30,17 +30,19 @@ public static void sendmail() throws EmailException {
 			  email.setFrom("support@aptagrim.co");
 			  email.setSubject("Test Automation Report CI/CD"+" "+formattedDate);
 			
-		      String signature = "\n\nBest regards,\nQa Team";
+		      String signature = "\n\nBest regards,\nDinesh (QA Engg)";
 		      
 		     
 		     
 			  email.addTo("dinesh.saiwal@aptagrim.com");
 
-
+			  email.setMsg(result+signature);
 			  email.attach(attachment);
 			  
-			  email.send();
-			  
-			  System.out.println("Email Sent Successfully");
+			  try {email.send();
+				System.out.println("************************* Email Sent Successfully *****************************");} 
+			catch (Exception e) {
+				System.out.println("************************* Failed to send email.*************************");
+				e.printStackTrace();}
   
 }}
