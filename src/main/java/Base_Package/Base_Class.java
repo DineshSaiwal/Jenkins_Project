@@ -1,4 +1,5 @@
 package Base_Package;
+import java.awt.Desktop;
 import java.io.File;
 import java.nio.file.Files;
 import java.nio.file.Paths;
@@ -29,19 +30,19 @@ public class Base_Class {
 	
 		public static ExtentReports extent;
 		ExtentSparkReporter sparkReporter;  
-		public WebDriver driver;
+		public static WebDriver driver;
 		public static String userdir = System.getProperty("user.dir");
-		  public static String  browserName;
-		    public static String Pass;
-			public static String P_Percentage;
-			public static String Fail;
-			public static String F_Percentage;
+		public static String  browserName;
+		public static String Pass;
+		public static String P_Percentage;
+		public static String Fail;
+		public static String F_Percentage;
 			
-			public static String T_Pass;
-			public static String P_Scrips;
-			public static String T_Fail;
-			public static String F_Scripts;
-			public static String result;
+		public static String T_Pass;
+		public static String P_Scrips;
+		public static String T_Fail;
+		public static String F_Scripts;
+		public static String result;
 		
 		@BeforeSuite
 		public void generateReport() throws IOException{

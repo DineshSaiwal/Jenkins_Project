@@ -2,43 +2,43 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-04-28T12:50:43 IST" name="Suite" finished-at="2025-04-28T12:50:49 IST" duration-ms="5849">
+  <suite started-at="2025-04-30T12:19:16 IST" name="Suite" finished-at="2025-04-30T12:19:22 IST" duration-ms="6352">
     <groups>
     </groups>
-    <test started-at="2025-04-28T12:50:43 IST" name="Jenkins Test" finished-at="2025-04-28T12:50:49 IST" duration-ms="5849">
-      <class name="Test_Package.Login">
-        <test-method is-config="true" signature="generateReport()[pri:0, instance:Test_Package.Login@448c8166]" started-at="2025-04-28T12:50:43 IST" name="generateReport" finished-at="2025-04-28T12:50:43 IST" duration-ms="143" status="PASS">
+    <test started-at="2025-04-30T12:19:16 IST" name="Jenkins Test" finished-at="2025-04-30T12:19:22 IST" duration-ms="6352">
+      <class name="Test_Scripts.Admin_Login">
+        <test-method is-config="true" signature="generateReport()[pri:0, instance:Test_Scripts.Admin_Login@1a5a4e19]" started-at="2025-04-30T12:19:15 IST" name="generateReport" finished-at="2025-04-30T12:19:16 IST" duration-ms="148" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- generateReport -->
-        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:Test_Package.Login@448c8166]" started-at="2025-04-28T12:50:43 IST" name="setUp" finished-at="2025-04-28T12:50:47 IST" duration-ms="3517" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:Test_Scripts.Admin_Login@1a5a4e19]" started-at="2025-04-30T12:19:16 IST" name="setUp" finished-at="2025-04-30T12:19:17 IST" duration-ms="1779" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[https://practicetestautomation.com/practice-test-login/]]>
+                <![CDATA[https://qa-bidplan.aptagrim.co/auth/signin]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="Test_Login()[pri:0, instance:Test_Package.Login@448c8166]" started-at="2025-04-28T12:50:47 IST" name="Test_Login" finished-at="2025-04-28T12:50:49 IST" duration-ms="2158" status="PASS">
+        <test-method signature="AdminLogin_Test()[pri:0, instance:Test_Scripts.Admin_Login@1a5a4e19]" started-at="2025-04-30T12:19:17 IST" name="AdminLogin_Test" finished-at="2025-04-30T12:19:22 IST" duration-ms="4392" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Test_Login -->
-        <test-method is-config="true" signature="Close_Browser()[pri:0, instance:Test_Package.Login@448c8166]" started-at="2025-04-28T12:50:49 IST" name="Close_Browser" finished-at="2025-04-28T12:50:49 IST" duration-ms="157" status="PASS">
+        </test-method> <!-- AdminLogin_Test -->
+        <test-method is-config="true" signature="Close_Browser()[pri:0, instance:Test_Scripts.Admin_Login@1a5a4e19]" started-at="2025-04-30T12:19:22 IST" name="Close_Browser" finished-at="2025-04-30T12:19:22 IST" duration-ms="168" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Close_Browser -->
-        <test-method is-config="true" signature="Execution_Results()[pri:0, instance:Test_Package.Login@448c8166]" started-at="2025-04-28T12:50:49 IST" name="Execution_Results" finished-at="2025-04-28T12:50:49 IST" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="Execution_Results()[pri:0, instance:Test_Scripts.Admin_Login@1a5a4e19]" started-at="2025-04-30T12:19:22 IST" name="Execution_Results" finished-at="2025-04-30T12:19:22 IST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Execution_Results -->
-        <test-method is-config="true" signature="TearDown()[pri:0, instance:Test_Package.Login@448c8166]" started-at="2025-04-28T12:50:49 IST" name="TearDown" finished-at="2025-04-28T12:50:50 IST" duration-ms="991" status="PASS">
+        <test-method is-config="true" signature="TearDown()[pri:0, instance:Test_Scripts.Admin_Login@1a5a4e19]" started-at="2025-04-30T12:19:22 IST" name="TearDown" finished-at="2025-04-30T12:19:23 IST" duration-ms="804" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TearDown -->
-      </class> <!-- Test_Package.Login -->
+      </class> <!-- Test_Scripts.Admin_Login -->
     </test> <!-- Jenkins Test -->
   </suite> <!-- Suite -->
 </testng-results>

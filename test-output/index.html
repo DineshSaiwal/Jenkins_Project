@@ -104,7 +104,7 @@
                     <div class="method-list-content passed suite-Suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="Test_Package.Login" class="method navigator-link" hash-for-method="Test_Login">Test_Login</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="Test_Scripts.Admin_Login" class="method navigator-link" hash-for-method="AdminLogin_Test">AdminLogin_Test</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Suite -->
@@ -122,14 +122,14 @@
           <div class="suite-Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">Test_Package.Login</span>
+              <span class="class-name">Test_Scripts.Admin_Login</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="Test_Login">
-                  </a> <!-- Test_Login -->
-                  <span class="method-name">Test_Login</span>
+                  <a name="AdminLogin_Test">
+                  </a> <!-- AdminLogin_Test -->
+                  <span class="method-name">AdminLogin_Test</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -144,10 +144,10 @@
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite name=&quot;Suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
-  &lt;parameter name=&quot;url&quot; value=&quot;https://practicetestautomation.com/practice-test-login/&quot;/&gt;
+  &lt;parameter name=&quot;url&quot; value=&quot;https://qa-bidplan.aptagrim.co/auth/signin&quot;/&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Jenkins Test&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;Test_Package.Login&quot;/&gt;
+      &lt;class name=&quot;Test_Scripts.Admin_Login&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Jenkins Test --&gt;
 &lt;/suite&gt; &lt;!-- Suite --&gt;
@@ -189,14 +189,14 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'Test_Login')
-data.setCell(0, 2, 'Test_Package.Login')
-data.setCell(0, 3, 2158);
+data.setCell(0, 1, 'AdminLogin_Test')
+data.setCell(0, 2, 'Test_Scripts.Admin_Login')
+data.setCell(0, 3, 4392);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 2 seconds</span>
+              <span class="suite-total-time">Total running time: 4 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -222,30 +222,30 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">Test_Package.Login</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">Test_Scripts.Admin_Login</div> <!-- chronological-class-name -->
               <div class="configuration-suite before">
                 <span class="method-name">generateReport</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-suite before -->
               <div class="configuration-class before">
-                <span class="method-name">setUp(https://practicetestautomation.com/practice-test-login/)</span>
-                <span class="method-start">151 ms</span>
+                <span class="method-name">setUp(https://qa-bidplan.aptagrim.co/auth/signin)</span>
+                <span class="method-start">155 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
-                <span class="method-name">Test_Login</span>
-                <span class="method-start">3675 ms</span>
+                <span class="method-name">AdminLogin_Test</span>
+                <span class="method-start">1937 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">Close_Browser</span>
-                <span class="method-start">5835 ms</span>
+                <span class="method-start">6332 ms</span>
               </div> <!-- configuration-class after -->
               <div class="configuration-test after">
                 <span class="method-name">Execution_Results</span>
-                <span class="method-start">5993 ms</span>
+                <span class="method-start">6501 ms</span>
               </div> <!-- configuration-test after -->
               <div class="configuration-suite after">
                 <span class="method-name">TearDown</span>
-                <span class="method-start">6009 ms</span>
+                <span class="method-start">6515 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
