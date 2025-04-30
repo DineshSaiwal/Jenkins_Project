@@ -16,9 +16,7 @@ public class Admin_Login extends Base_Class{
 	void AdminLogin_Test() throws InterruptedException {
 		
 		Login_Page pg= new Login_Page(driver);
-		
-		pg.EnterPWD();
-		pg.ClickSignIn();
+	
 		
 		test = extent.createTest("Admin Login Test").assignAuthor("Dinesh_Saiwal").assignDevice(browserName).assignCategory("Smoke");
 		test.info(MarkupHelper.createLabel("Test Case Executed On { "+ browserName +" } Browser", ExtentColor.BLUE));

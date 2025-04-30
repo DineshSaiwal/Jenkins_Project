@@ -17,7 +17,7 @@ public class Login_Page {
 	}
 	
 	
-	@FindBy(name = "email") private WebElement PWD;
+	@FindBy(name = "password") private WebElement PWD;
 	public void EnterPWD() {
 		PWD.sendKeys("Abcd.1234");
 	}

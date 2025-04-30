@@ -35,6 +35,7 @@ public static void sendmail() throws EmailException {
 		     
 		     
 			  email.addTo("dinesh.saiwal@aptagrim.com");
+			  email.addTo("akshay.jadhav@aptagrim.com");
 
 			  email.setMsg(result+signature);
 			  email.attach(attachment);

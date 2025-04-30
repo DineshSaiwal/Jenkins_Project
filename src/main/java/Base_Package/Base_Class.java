@@ -3,8 +3,10 @@ import java.awt.Desktop;
 import java.io.File;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.text.SimpleDateFormat;
 import java.io.IOException;
 import java.time.Duration;
+import java.util.Date;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
@@ -46,7 +48,10 @@ public class Base_Class {
 		
 		@BeforeSuite
 		public void generateReport() throws IOException{
-			sparkReporter = new ExtentSparkReporter("Reports/Automation_Report.html");
+			
+			String timestamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
+			String reportPath = "Reports/Automation_Report_" + timestamp + ".html";
+			sparkReporter = new ExtentSparkReporter(reportPath);
 			sparkReporter.loadXMLConfig(new File(userdir + "/extentconfig.xml"));
 			extent = new ExtentReports();
 		    extent.attachReporter(sparkReporter);	
