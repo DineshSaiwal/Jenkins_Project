@@ -1,16 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
-  <parameter name="Browser_Name" value="chrome"/>
+  <parameter name="url" value="https://qa-bidplan.aptagrim.co/auth/signin"/>
   <test thread-count="5" name="Jenkins Test(failed)">
     <classes>
-      <class name="Test_Package.Login">
+      <class name="Test_Scripts.Admin_Login">
         <methods>
           <include name="setUp"/>
-          <include name="Test_Login"/>
           <include name="Close_Browser"/>
+          <include name="AdminLogin_Test"/>
+          <include name="Execution_Results"/>
+          <include name="generateReport"/>
+          <include name="TearDown"/>
         </methods>
-      </class> <!-- Test_Package.Login -->
+      </class> <!-- Test_Scripts.Admin_Login -->
     </classes>
   </test> <!-- Jenkins Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

@@ -9,10 +9,18 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="8">Suite</th></tr>
-<tr><td><a href="#t0">Jenkins Test</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">6,602</td><td></td><td></td></tr>
+<tr><td><a href="#t0">Jenkins Test</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">6,968</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Jenkins Test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">Test_Scripts.Admin_Login</td><td><a href="#m0">AdminLogin_Test</a></td><td rowspan="1">1745997115472</td><td rowspan="1">4280</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Jenkins Test &#8212; failed (configuration methods)</th></tr><tr class="failedeven"><td rowspan="1">Test_Scripts.Admin_Login</td><td><a href="#m0">TearDown</a></td><td rowspan="1">1746006796806</td><td rowspan="1">187</td></tr><tr><th colspan="4">Jenkins Test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">Test_Scripts.Admin_Login</td><td><a href="#m1">AdminLogin_Test</a></td><td rowspan="1">1746006792397</td><td rowspan="1">4225</td></tr></tbody>
 </table>
-<h2>Jenkins Test</h2><h3 id="m0">Test_Scripts.Admin_Login#AdminLogin_Test</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Jenkins Test</h2><h3 id="m0">Test_Scripts.Admin_Login#TearDown</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.apache.commons.mail.EmailException: Cannot attach file &quot;C:\Users\Dinesh\git\Jenkins_Project/Reports/Automation_Report.html&quot;
+	at org.apache.commons.mail.MultiPartEmail.attach(MultiPartEmail.java:333)
+	at Base_Package.Java_Mail.sendmail(Java_Mail.java:41)
+	at Base_Package.Base_Class.TearDown(Base_Class.java:142)
+Caused by: java.io.IOException: &quot;C:\Users\Dinesh\git\Jenkins_Project/Reports/Automation_Report.html&quot; does not exist
+	at org.apache.commons.mail.MultiPartEmail.attach(MultiPartEmail.java:322)
+	... 19 more
+... Removed 17 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">Test_Scripts.Admin_Login#AdminLogin_Test</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

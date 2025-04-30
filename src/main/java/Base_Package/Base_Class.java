@@ -49,13 +49,13 @@ public class Base_Class {
 		@BeforeSuite
 		public void generateReport() throws IOException{
 			
-			String timestamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
+			String timestamp = new SimpleDateFormat("dd-MM-yy_HH-mm-ss").format(new Date());
 			String reportPath = "Reports/Automation_Report_" + timestamp + ".html";
 			sparkReporter = new ExtentSparkReporter(reportPath);
 			sparkReporter.loadXMLConfig(new File(userdir + "/extentconfig.xml"));
 			extent = new ExtentReports();
 		    extent.attachReporter(sparkReporter);	
-		    extent.setSystemInfo("Project_Name", "Test Project");
+		    extent.setSystemInfo("Project_Name", "bidPlan");
 		    extent.setSystemInfo("Environment", "QA");
 		}
 		
@@ -130,6 +130,7 @@ public class Base_Class {
 		@AfterClass
 		public void Close_Browser() {
 			extent.flush();
+			
 		}
 	
 		
