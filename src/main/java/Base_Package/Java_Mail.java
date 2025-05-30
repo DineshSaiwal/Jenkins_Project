@@ -22,22 +22,19 @@ public static void sendmail() throws EmailException {
 			  
 			
 			  MultiPartEmail email = new MultiPartEmail();
-			  email.setHostName("mail.aptagrim.co");
-			  email.setSmtpPort(465);
-			  email.setAuthenticator(new DefaultAuthenticator("support@aptagrim.co", "Abcd.1234"));
+			  email.setHostName("Host");
+			  email.setSmtpPort("Port No");
+			  email.setAuthenticator(new DefaultAuthenticator("Mail", "Abcd.1234"));
 			  email.setSSLOnConnect(true);
 			  email.setTLS(true);
-			  email.setFrom("support@aptagrim.co");
+			  email.setFrom("Mail");
 			  email.setSubject("bidPlan Automation Report_"+" "+formattedDate);
 			
-		      String signature = "\n\nBest regards,\n QA Team";
+		      String signature = "\n\nBest regards,\n Dinesh Saiwal";
 		      
 		     
 		     
-			  email.addTo("dinesh.saiwal@aptagrim.com");
-			  email.addTo("akshay.jadhav@aptagrim.com");
-			  email.addTo("abhishek@aptagrim.com");
-			  email.addTo("sairam@aptagrim.com");
+			  email.addTo("dineshsaiwal@gmail.com");
 
 
 			  email.setMsg(result+signature);
