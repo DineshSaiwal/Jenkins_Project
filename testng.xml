@@ -4,7 +4,7 @@
 	<listeners>
     	<listener class-name="Base_Package.TestListener"/>
   	</listeners>
-    <parameter name="url" value="https://qa-bidplan.aptagrim.co/auth/signin" />
+    <parameter name="url" value="URL Of the Site" />
     
     
 	  <test name="bidPlan Test Scripts">
