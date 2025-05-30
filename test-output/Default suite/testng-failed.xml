@@ -3,13 +3,16 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Test_Package.Login">
+      <class name="Bid_Manager_Scripts.Adding_BidManager">
         <methods>
+          <include name="Add_Bid_Manager_Test"/>
           <include name="setUp"/>
-          <include name="Close_Browser"/>
-          <include name="Test_Login"/>
+          <include name="Execution_Results"/>
+          <include name="PushResultToReport"/>
+          <include name="generateReport"/>
+          <include name="TearDown"/>
         </methods>
-      </class> <!-- Test_Package.Login -->
+      </class> <!-- Bid_Manager_Scripts.Adding_BidManager -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

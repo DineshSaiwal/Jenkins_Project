@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [bidPlan Test Suit]" guice-stage="DEVELOPMENT">
+  <parameter name="url" value="https://qa-bidplan.aptagrim.co/auth/signin"/>
+  <test thread-count="5" name="bidPlan Test Scripts(failed)">
+    <classes>
+      <class name="Team_Member_Scripts.T_Member_Login">
+        <methods>
+          <include name="setUp"/>
+          <include name="Execution_Results"/>
+          <include name="PushResultToReport"/>
+          <include name="Team_Member_Login_Test"/>
+          <include name="generateReport"/>
+          <include name="TearDown"/>
+        </methods>
+      </class> <!-- Team_Member_Scripts.T_Member_Login -->
+    </classes>
+  </test> <!-- bidPlan Test Scripts(failed) -->
+</suite> <!-- Failed suite [bidPlan Test Suit] -->

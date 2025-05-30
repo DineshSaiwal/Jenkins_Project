@@ -15,9 +15,9 @@ public static void sendmail() throws EmailException {
 				String formattedDate = Date_Format.format(date);
 				
 			  EmailAttachment attachment = new EmailAttachment();
-			  attachment.setPath( userdir + "/Reports/Automation_Report.html");
+			  attachment.setPath(reportPath);
 			  attachment.setDisposition(EmailAttachment.ATTACHMENT);
-			  attachment.setDescription("TestReport"+" "+formattedDate+".html");
+			  attachment.setDescription("Execution Report"+" "+formattedDate+".html");
 			  attachment.setName("TestReport");
 			  
 			
@@ -28,14 +28,17 @@ public static void sendmail() throws EmailException {
 			  email.setSSLOnConnect(true);
 			  email.setTLS(true);
 			  email.setFrom("support@aptagrim.co");
-			  email.setSubject("Test Automation Report CI/CD"+" "+formattedDate);
+			  email.setSubject("bidPlan Automation Report_"+" "+formattedDate);
 			
-		      String signature = "\n\nBest regards,\nDinesh (QA Engg)";
+		      String signature = "\n\nBest regards,\n QA Team";
 		      
 		     
 		     
 			  email.addTo("dinesh.saiwal@aptagrim.com");
 			  email.addTo("akshay.jadhav@aptagrim.com");
+			  email.addTo("abhishek@aptagrim.com");
+			  email.addTo("sairam@aptagrim.com");
+
 
 			  email.setMsg(result+signature);
 			  email.attach(attachment);
@@ -43,7 +46,7 @@ public static void sendmail() throws EmailException {
 			  try {email.send();
 				System.out.println("************************* Email Sent Successfully *****************************");} 
 			catch (Exception e) {
-				System.out.println("************************* Failed to send email.*************************");
+				System.out.println("************************* Failed to send email. *************************");
 				e.printStackTrace();}
   
 }}

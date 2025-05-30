@@ -1,17 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="26" total="40" passed="14" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-04-30T15:23:09 IST" name="Suite" finished-at="2025-04-30T15:23:16 IST" duration-ms="6968">
+  <suite started-at="2025-05-30T11:34:20 IST" name="bidPlan Test Suit" finished-at="2025-05-30T11:37:15 IST" duration-ms="175167">
     <groups>
     </groups>
-    <test started-at="2025-04-30T15:23:09 IST" name="Jenkins Test" finished-at="2025-04-30T15:23:16 IST" duration-ms="6968">
-      <class name="Test_Scripts.Admin_Login">
-        <test-method is-config="true" signature="generateReport()[pri:0, instance:Test_Scripts.Admin_Login@1a5a4e19]" started-at="2025-04-30T15:23:09 IST" name="generateReport" finished-at="2025-04-30T15:23:09 IST" duration-ms="149" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- generateReport -->
-        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:Test_Scripts.Admin_Login@1a5a4e19]" started-at="2025-04-30T15:23:09 IST" name="setUp" finished-at="2025-04-30T15:23:12 IST" duration-ms="2562" status="PASS">
+    <test started-at="2025-05-30T11:34:20 IST" name="bidPlan Test Scripts" finished-at="2025-05-30T11:37:15 IST" duration-ms="175167">
+      <class name="Team_Member_Scripts.T_Member_Login">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:Team_Member_Scripts.T_Member_Login@47c81abf]" started-at="2025-05-30T11:37:10 IST" name="setUp" finished-at="2025-05-30T11:37:11 IST" duration-ms="1356" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -22,55 +18,296 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="AdminLogin_Test()[pri:0, instance:Test_Scripts.Admin_Login@1a5a4e19]" started-at="2025-04-30T15:23:12 IST" name="AdminLogin_Test" finished-at="2025-04-30T15:23:16 IST" duration-ms="4225" status="PASS">
+        <test-method signature="Team_Member_Login_Test()[pri:0, instance:Team_Member_Scripts.T_Member_Login@47c81abf]" started-at="2025-05-30T11:37:11 IST" name="Team_Member_Login_Test" finished-at="2025-05-30T11:37:15 IST" duration-ms="4178" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- AdminLogin_Test -->
-        <test-method is-config="true" signature="Close_Browser()[pri:0, instance:Test_Scripts.Admin_Login@1a5a4e19]" started-at="2025-04-30T15:23:16 IST" name="Close_Browser" finished-at="2025-04-30T15:23:16 IST" duration-ms="165" status="PASS">
+        </test-method> <!-- Team_Member_Login_Test -->
+        <test-method is-config="true" signature="PushResultToReport()[pri:0, instance:Team_Member_Scripts.T_Member_Login@47c81abf]" started-at="2025-05-30T11:37:15 IST" name="PushResultToReport" finished-at="2025-05-30T11:37:15 IST" duration-ms="121" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Close_Browser -->
-        <test-method is-config="true" signature="Execution_Results()[pri:0, instance:Test_Scripts.Admin_Login@1a5a4e19]" started-at="2025-04-30T15:23:16 IST" name="Execution_Results" finished-at="2025-04-30T15:23:16 IST" duration-ms="0" status="PASS">
+        </test-method> <!-- PushResultToReport -->
+      </class> <!-- Team_Member_Scripts.T_Member_Login -->
+      <class name="Bid_Manager_Scripts.Historical_Proposal">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:Bid_Manager_Scripts.Historical_Proposal@4ef74c30]" started-at="2025-05-30T11:35:24 IST" name="setUp" finished-at="2025-05-30T11:35:26 IST" duration-ms="1980" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[https://qa-bidplan.aptagrim.co/auth/signin]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="Adding_Historical_Proposal()[pri:0, instance:Bid_Manager_Scripts.Historical_Proposal@4ef74c30]" started-at="2025-05-30T11:35:26 IST" name="Adding_Historical_Proposal" finished-at="2025-05-30T11:35:53 IST" duration-ms="27532" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Adding_Historical_Proposal -->
+        <test-method is-config="true" signature="PushResultToReport()[pri:0, instance:Bid_Manager_Scripts.Historical_Proposal@4ef74c30]" started-at="2025-05-30T11:35:53 IST" name="PushResultToReport" finished-at="2025-05-30T11:35:54 IST" duration-ms="104" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- PushResultToReport -->
+      </class> <!-- Bid_Manager_Scripts.Historical_Proposal -->
+      <class name="Bid_Manager_Scripts.Adding_BidManager">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:Bid_Manager_Scripts.Adding_BidManager@638ef7ed]" started-at="2025-05-30T11:36:09 IST" name="setUp" finished-at="2025-05-30T11:36:11 IST" duration-ms="1670" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[https://qa-bidplan.aptagrim.co/auth/signin]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="Add_Bid_Manager_Test()[pri:0, instance:Bid_Manager_Scripts.Adding_BidManager@638ef7ed]" started-at="2025-05-30T11:36:11 IST" name="Add_Bid_Manager_Test" finished-at="2025-05-30T11:36:24 IST" duration-ms="12812" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Add_Bid_Manager_Test -->
+        <test-method is-config="true" signature="PushResultToReport()[pri:0, instance:Bid_Manager_Scripts.Adding_BidManager@638ef7ed]" started-at="2025-05-30T11:36:24 IST" name="PushResultToReport" finished-at="2025-05-30T11:36:24 IST" duration-ms="94" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- PushResultToReport -->
+      </class> <!-- Bid_Manager_Scripts.Adding_BidManager -->
+      <class name="Bid_Manager_Scripts.Resource_Bank">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:Bid_Manager_Scripts.Resource_Bank@7283d3eb]" started-at="2025-05-30T11:35:54 IST" name="setUp" finished-at="2025-05-30T11:35:55 IST" duration-ms="1544" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[https://qa-bidplan.aptagrim.co/auth/signin]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="Adding_Historical_Proposal()[pri:0, instance:Bid_Manager_Scripts.Resource_Bank@7283d3eb]" started-at="2025-05-30T11:35:55 IST" name="Adding_Historical_Proposal" finished-at="2025-05-30T11:36:09 IST" duration-ms="14060" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Adding_Historical_Proposal -->
+        <test-method is-config="true" signature="PushResultToReport()[pri:0, instance:Bid_Manager_Scripts.Resource_Bank@7283d3eb]" started-at="2025-05-30T11:36:09 IST" name="PushResultToReport" finished-at="2025-05-30T11:36:09 IST" duration-ms="89" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- PushResultToReport -->
+      </class> <!-- Bid_Manager_Scripts.Resource_Bank -->
+      <class name="Bid_Manager_Scripts.B_Manager_Login">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:Bid_Manager_Scripts.B_Manager_Login@3e62d773]" started-at="2025-05-30T11:35:21 IST" name="setUp" finished-at="2025-05-30T11:35:23 IST" duration-ms="1781" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[https://qa-bidplan.aptagrim.co/auth/signin]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="B_Manager_Login_Test()[pri:0, instance:Bid_Manager_Scripts.B_Manager_Login@3e62d773]" started-at="2025-05-30T11:35:23 IST" name="B_Manager_Login_Test" finished-at="2025-05-30T11:35:24 IST" duration-ms="1189" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- B_Manager_Login_Test -->
+        <test-method is-config="true" signature="PushResultToReport()[pri:0, instance:Bid_Manager_Scripts.B_Manager_Login@3e62d773]" started-at="2025-05-30T11:35:24 IST" name="PushResultToReport" finished-at="2025-05-30T11:35:24 IST" duration-ms="88" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- PushResultToReport -->
+      </class> <!-- Bid_Manager_Scripts.B_Manager_Login -->
+      <class name="Super_Admin_Scripts.Super_Admin_Login">
+        <test-method is-config="true" signature="generateReport()[pri:0, instance:Super_Admin_Scripts.Super_Admin_Login@5852c06f]" started-at="2025-05-30T11:34:20 IST" name="generateReport" finished-at="2025-05-30T11:34:20 IST" duration-ms="151" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- generateReport -->
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:Super_Admin_Scripts.Super_Admin_Login@5852c06f]" started-at="2025-05-30T11:34:20 IST" name="setUp" finished-at="2025-05-30T11:34:22 IST" duration-ms="2353" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[https://qa-bidplan.aptagrim.co/auth/signin]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="Super_Admin_Login_Test()[pri:0, instance:Super_Admin_Scripts.Super_Admin_Login@5852c06f]" started-at="2025-05-30T11:34:22 IST" name="Super_Admin_Login_Test" finished-at="2025-05-30T11:34:24 IST" duration-ms="1966" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Super_Admin_Login_Test -->
+        <test-method is-config="true" signature="PushResultToReport()[pri:0, instance:Super_Admin_Scripts.Super_Admin_Login@5852c06f]" started-at="2025-05-30T11:34:24 IST" name="PushResultToReport" finished-at="2025-05-30T11:34:25 IST" duration-ms="280" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- PushResultToReport -->
+        <test-method is-config="true" signature="Execution_Results()[pri:0, instance:Super_Admin_Scripts.Super_Admin_Login@5852c06f]" started-at="2025-05-30T11:37:15 IST" name="Execution_Results" finished-at="2025-05-30T11:37:15 IST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Execution_Results -->
-        <test-method is-config="true" signature="TearDown()[pri:0, instance:Test_Scripts.Admin_Login@1a5a4e19]" started-at="2025-04-30T15:23:16 IST" name="TearDown" finished-at="2025-04-30T15:23:16 IST" duration-ms="187" status="FAIL">
-          <exception class="org.apache.commons.mail.EmailException">
-            <message>
-              <![CDATA[Cannot attach file "C:\Users\Dinesh\git\Jenkins_Project/Reports/Automation_Report.html"]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.apache.commons.mail.EmailException: Cannot attach file "C:\Users\Dinesh\git\Jenkins_Project/Reports/Automation_Report.html"
-at org.apache.commons.mail.MultiPartEmail.attach(MultiPartEmail.java:333)
-at Base_Package.Java_Mail.sendmail(Java_Mail.java:41)
-at Base_Package.Base_Class.TearDown(Base_Class.java:142)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:135)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:65)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:381)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:319)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:396)
-at org.testng.SuiteRunner.run(SuiteRunner.java:326)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1249)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
-at org.testng.TestNG.runSuites(TestNG.java:1092)
-at org.testng.TestNG.run(TestNG.java:1060)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-Caused by: java.io.IOException: "C:\Users\Dinesh\git\Jenkins_Project/Reports/Automation_Report.html" does not exist
-at org.apache.commons.mail.MultiPartEmail.attach(MultiPartEmail.java:322)
-... 19 more
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.apache.commons.mail.EmailException -->
+      </class> <!-- Super_Admin_Scripts.Super_Admin_Login -->
+      <class name="Super_Admin_Scripts.Add_Client">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:Super_Admin_Scripts.Add_Client@34129c78]" started-at="2025-05-30T11:34:25 IST" name="setUp" finished-at="2025-05-30T11:34:26 IST" duration-ms="1423" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[https://qa-bidplan.aptagrim.co/auth/signin]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TearDown -->
-      </class> <!-- Test_Scripts.Admin_Login -->
-    </test> <!-- Jenkins Test -->
-  </suite> <!-- Suite -->
+        </test-method> <!-- setUp -->
+        <test-method signature="Add_Client_Test()[pri:0, instance:Super_Admin_Scripts.Add_Client@34129c78]" started-at="2025-05-30T11:34:26 IST" name="Add_Client_Test" finished-at="2025-05-30T11:34:45 IST" duration-ms="19060" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Add_Client_Test -->
+        <test-method is-config="true" signature="PushResultToReport()[pri:0, instance:Super_Admin_Scripts.Add_Client@34129c78]" started-at="2025-05-30T11:34:45 IST" name="PushResultToReport" finished-at="2025-05-30T11:34:45 IST" duration-ms="116" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- PushResultToReport -->
+      </class> <!-- Super_Admin_Scripts.Add_Client -->
+      <class name="Bid_Manager_Scripts.Updating_BidManager">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:Bid_Manager_Scripts.Updating_BidManager@4bff7da0]" started-at="2025-05-30T11:36:24 IST" name="setUp" finished-at="2025-05-30T11:36:25 IST" duration-ms="1593" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[https://qa-bidplan.aptagrim.co/auth/signin]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="Update_Bid_Manager_Test()[pri:0, instance:Bid_Manager_Scripts.Updating_BidManager@4bff7da0]" started-at="2025-05-30T11:36:25 IST" name="Update_Bid_Manager_Test" finished-at="2025-05-30T11:36:40 IST" duration-ms="14440" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Update_Bid_Manager_Test -->
+        <test-method is-config="true" signature="PushResultToReport()[pri:0, instance:Bid_Manager_Scripts.Updating_BidManager@4bff7da0]" started-at="2025-05-30T11:36:40 IST" name="PushResultToReport" finished-at="2025-05-30T11:36:40 IST" duration-ms="110" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- PushResultToReport -->
+      </class> <!-- Bid_Manager_Scripts.Updating_BidManager -->
+      <class name="Admin_Scripts.Admin_Login">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:Admin_Scripts.Admin_Login@4c2bb6e0]" started-at="2025-05-30T11:35:18 IST" name="setUp" finished-at="2025-05-30T11:35:20 IST" duration-ms="1672" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[https://qa-bidplan.aptagrim.co/auth/signin]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="Admin_Login_Test()[pri:0, instance:Admin_Scripts.Admin_Login@4c2bb6e0]" started-at="2025-05-30T11:35:20 IST" name="Admin_Login_Test" finished-at="2025-05-30T11:35:21 IST" duration-ms="1194" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Admin_Login_Test -->
+        <test-method is-config="true" signature="PushResultToReport()[pri:0, instance:Admin_Scripts.Admin_Login@4c2bb6e0]" started-at="2025-05-30T11:35:21 IST" name="PushResultToReport" finished-at="2025-05-30T11:35:21 IST" duration-ms="89" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- PushResultToReport -->
+      </class> <!-- Admin_Scripts.Admin_Login -->
+      <class name="Super_Admin_Scripts.Updating_Client">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:Super_Admin_Scripts.Updating_Client@7d61eb55]" started-at="2025-05-30T11:34:45 IST" name="setUp" finished-at="2025-05-30T11:34:47 IST" duration-ms="1647" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[https://qa-bidplan.aptagrim.co/auth/signin]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="Update_Client_Test()[pri:0, instance:Super_Admin_Scripts.Updating_Client@7d61eb55]" started-at="2025-05-30T11:34:47 IST" name="Update_Client_Test" finished-at="2025-05-30T11:35:05 IST" duration-ms="17715" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Update_Client_Test -->
+        <test-method is-config="true" signature="PushResultToReport()[pri:0, instance:Super_Admin_Scripts.Updating_Client@7d61eb55]" started-at="2025-05-30T11:35:05 IST" name="PushResultToReport" finished-at="2025-05-30T11:35:05 IST" duration-ms="118" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- PushResultToReport -->
+      </class> <!-- Super_Admin_Scripts.Updating_Client -->
+      <class name="Super_Admin_Scripts.Inactive_Client">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:Super_Admin_Scripts.Inactive_Client@222a59e6]" started-at="2025-05-30T11:35:05 IST" name="setUp" finished-at="2025-05-30T11:35:06 IST" duration-ms="1658" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[https://qa-bidplan.aptagrim.co/auth/signin]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="Inactivate_Client_Test()[pri:0, instance:Super_Admin_Scripts.Inactive_Client@222a59e6]" started-at="2025-05-30T11:35:06 IST" name="Inactivate_Client_Test" finished-at="2025-05-30T11:35:15 IST" duration-ms="8293" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Inactivate_Client_Test -->
+        <test-method is-config="true" signature="PushResultToReport()[pri:0, instance:Super_Admin_Scripts.Inactive_Client@222a59e6]" started-at="2025-05-30T11:35:15 IST" name="PushResultToReport" finished-at="2025-05-30T11:35:15 IST" duration-ms="113" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- PushResultToReport -->
+      </class> <!-- Super_Admin_Scripts.Inactive_Client -->
+      <class name="Bid_Manager_Scripts.Adding_Team_Member">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:Bid_Manager_Scripts.Adding_Team_Member@3f1d2e23]" started-at="2025-05-30T11:36:40 IST" name="setUp" finished-at="2025-05-30T11:36:42 IST" duration-ms="2237" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[https://qa-bidplan.aptagrim.co/auth/signin]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="Adding_Team_Member_Test()[pri:0, instance:Bid_Manager_Scripts.Adding_Team_Member@3f1d2e23]" started-at="2025-05-30T11:36:42 IST" name="Adding_Team_Member_Test" finished-at="2025-05-30T11:36:55 IST" duration-ms="12420" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Adding_Team_Member_Test -->
+        <test-method is-config="true" signature="PushResultToReport()[pri:0, instance:Bid_Manager_Scripts.Adding_Team_Member@3f1d2e23]" started-at="2025-05-30T11:36:55 IST" name="PushResultToReport" finished-at="2025-05-30T11:36:55 IST" duration-ms="105" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- PushResultToReport -->
+      </class> <!-- Bid_Manager_Scripts.Adding_Team_Member -->
+      <class name="Bid_Manager_Scripts.Updating_TeamMember">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:Bid_Manager_Scripts.Updating_TeamMember@536dbea0]" started-at="2025-05-30T11:36:55 IST" name="setUp" finished-at="2025-05-30T11:36:56 IST" duration-ms="1359" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[https://qa-bidplan.aptagrim.co/auth/signin]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="Update_TeamMember_Test()[pri:0, instance:Bid_Manager_Scripts.Updating_TeamMember@536dbea0]" started-at="2025-05-30T11:36:56 IST" name="Update_TeamMember_Test" finished-at="2025-05-30T11:37:10 IST" duration-ms="13408" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Update_TeamMember_Test -->
+        <test-method is-config="true" signature="PushResultToReport()[pri:0, instance:Bid_Manager_Scripts.Updating_TeamMember@536dbea0]" started-at="2025-05-30T11:37:10 IST" name="PushResultToReport" finished-at="2025-05-30T11:37:10 IST" duration-ms="98" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- PushResultToReport -->
+      </class> <!-- Bid_Manager_Scripts.Updating_TeamMember -->
+      <class name="Super_Admin_Scripts.Active_Client">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:Super_Admin_Scripts.Active_Client@6c7a164b]" started-at="2025-05-30T11:35:15 IST" name="setUp" finished-at="2025-05-30T11:35:16 IST" duration-ms="1427" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[https://qa-bidplan.aptagrim.co/auth/signin]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="Activate_Client_Test()[pri:0, instance:Super_Admin_Scripts.Active_Client@6c7a164b]" started-at="2025-05-30T11:35:16 IST" name="Activate_Client_Test" finished-at="2025-05-30T11:35:18 IST" duration-ms="1551" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Activate_Client_Test -->
+        <test-method is-config="true" signature="PushResultToReport()[pri:0, instance:Super_Admin_Scripts.Active_Client@6c7a164b]" started-at="2025-05-30T11:35:18 IST" name="PushResultToReport" finished-at="2025-05-30T11:35:18 IST" duration-ms="94" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- PushResultToReport -->
+      </class> <!-- Super_Admin_Scripts.Active_Client -->
+    </test> <!-- bidPlan Test Scripts -->
+  </suite> <!-- bidPlan Test Suit -->
 </testng-results>

@@ -2,18 +2,20 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <parameter name="url" value="https://qa-bidplan.aptagrim.co/auth/signin"/>
-  <test thread-count="5" name="Jenkins Test(failed)">
+  <listeners>
+    <listener class-name="Base_Package.TestListener"/>
+  </listeners>
+  <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="Test_Scripts.Admin_Login">
+      <class name="Bid_Manager_Scripts.Adding_BidManager">
         <methods>
+          <include name="Add_Bid_Manager_Test"/>
           <include name="setUp"/>
-          <include name="Close_Browser"/>
-          <include name="AdminLogin_Test"/>
           <include name="Execution_Results"/>
+          <include name="PushResultToReport"/>
           <include name="generateReport"/>
-          <include name="TearDown"/>
         </methods>
-      </class> <!-- Test_Scripts.Admin_Login -->
+      </class> <!-- Bid_Manager_Scripts.Adding_BidManager -->
     </classes>
-  </test> <!-- Jenkins Test(failed) -->
+  </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

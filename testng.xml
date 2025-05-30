@@ -1,11 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Suite">
-   <!--<parameter name="url" value="https://practicetestautomation.com/practice-test-login/" />-->
+<suite name="bidPlan Test Suit">
+	<listeners>
+    	<listener class-name="Base_Package.TestListener"/>
+  	</listeners>
     <parameter name="url" value="https://qa-bidplan.aptagrim.co/auth/signin" />
-  <test name="Jenkins Test">
-    <classes>
-      <class name="Test_Scripts.Admin_Login"/>
-    </classes>
-  </test>  
-</suite>  
+    
+    
+	  <test name="bidPlan Test Scripts">
+	     <classes> 
+	
+	
+<!--========================================== Super Admin ===================================================-->	
+			<class name="Super_Admin_Scripts.Super_Admin_Login"/>
+	      	<class name="Super_Admin_Scripts.Add_Client"/>
+	      	<class name="Super_Admin_Scripts.Updating_Client"/>
+	      	<class name="Super_Admin_Scripts.Inactive_Client"/>
+	      	<class name="Super_Admin_Scripts.Active_Client"/>
+	      	
+<!--============================================= Admin ===================================================-->	
+
+	     	<class name="Admin_Scripts.Admin_Login"/>   
+	     	
+	     	
+<!--========================================== Bid Manager ===================================================-->	
+
+	     	<class name="Bid_Manager_Scripts.B_Manager_Login"/>
+	     	<class name="Bid_Manager_Scripts.Historical_Proposal"/>
+	       	<class name="Bid_Manager_Scripts.Resource_Bank"/>
+	       	<class name="Bid_Manager_Scripts.Adding_BidManager"/>
+	       	<class name="Bid_Manager_Scripts.Updating_BidManager"/>
+	     	<class name="Bid_Manager_Scripts.Adding_Team_Member"/>
+	     	<class name="Bid_Manager_Scripts.Updating_TeamMember"/>
+	     	
+	     	
+<!--========================================== Team Member ===================================================-->	
+
+	  		<class name="Team_Member_Scripts.T_Member_Login"/>
+	  		
+	       	
+
+	       	
+	       	
+	    </classes>
+	
+	  </test>  
+	  
+  
+</suite>
+
+

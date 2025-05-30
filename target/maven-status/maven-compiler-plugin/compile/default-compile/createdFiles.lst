@@ -1,3 +1,12 @@
-Base_Package\Login_Page.class
-Base_Package\Base_Class.class
+Base_Package\TestListener.class
+Base_Package\User_Login.class
+Scenarios\Resource_Bank_Page.class
+Scenarios\Historical_Proposal_Page.class
+Base_Package\Utility_Class.class
+Scenarios\Login_Page.class
 Base_Package\Java_Mail.class
+Scenarios\Active_Client_Page.class
+Scenarios\Inactive_Client_Page.class
+Scenarios\Add_Client_Page.class
+Base_Package\Utility_Class$1.class
+Base_Package\Base_Class.class

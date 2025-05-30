@@ -6,51 +6,50 @@ import java.awt.datatransfer.StringSelection;
 import java.awt.event.KeyEvent;
 import java.io.FileInputStream;
 import java.io.IOException;
-import java.time.Duration;
 import org.apache.poi.ss.usermodel.Cell;
-import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.WorkbookFactory;
 import org.openqa.selenium.By;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
-
   
 public class Utility_Class extends Base_Class{
 	
-	public static  String userdir = System.getProperty("user.dir");
 	private static FileInputStream file;
 	public static Sheet sheet;
 	public static String Actual_Message;
 	
-//	static WebDriver driver = Base_Class.driver;
 //=================================[ To fetch Excel File Data ] ============================
 	
-    public static void Set_File_Path(String SheetName)throws IOException {
-    	file = new FileInputStream(userdir+"\\Required_Files\\Psyhire_Credentials.xlsx");
-    	sheet= WorkbookFactory.create(file).getSheet(SheetName);}
+  
     
-    public static String getCellData(int rowNumber, int columnNumber) throws IOException {
-    	Set_File_Path("Credentials ");
-        Row row = sheet.getRow(rowNumber -1);
-        Cell cell = row.getCell(columnNumber -1);
-        String cellValue = cell.getStringCellValue();
+    public static String getCellData(String SheetName,int rowNumber, int columnNumber) throws IOException {
+    	file = new FileInputStream(userdir+"/Files/Bid_Excel.xlsx");
+    	sheet= WorkbookFactory.create(file).getSheet(SheetName);
+    	Cell cell = sheet.getRow(rowNumber -1).getCell(columnNumber -1);
+    	
+        String cellValue = "";
+        if (cell != null) {
+            switch (cell.getCellType()) {
+                case STRING:
+                    cellValue = cell.getStringCellValue();
+                    break;
+                case NUMERIC:
+                    cellValue = String.valueOf(cell.getNumericCellValue());
+                    break;
+                case BOOLEAN:
+                    cellValue = String.valueOf(cell.getBooleanCellValue());
+                    break;
+                default:
+                    throw new RuntimeException("Unsupported cell type");
+            }
+        }
+        
+        file.close(); 
         return cellValue;}
     
    
-    public static void Excel_File_Path(String SheetName)throws IOException {
-    	file = new FileInputStream(userdir+"\\Required_Files\\Agency_Data.xlsx");
-    	sheet= WorkbookFactory.create(file).getSheet(SheetName);}
-    
-    public static String CellData(String name_of_sheet,int rowNumber, int columnNumber) throws IOException {
-    	Excel_File_Path(name_of_sheet);
-        Row row = sheet.getRow(rowNumber -1);
-        Cell cell = row.getCell(columnNumber -1);
-        String cellValue = cell.getStringCellValue();
-        return cellValue;}
     
     
 //===================================[ To Upload External Files ]================================================
@@ -58,7 +57,7 @@ public class Utility_Class extends Base_Class{
     public static void Upload_File(String path_Of_File) throws AWTException, InterruptedException {
     	Robot rb=new Robot();
     	StringSelection Profile = new StringSelection(path_Of_File);
-    	rb.delay(1000);
+    	rb.delay(2000);
     	Toolkit.getDefaultToolkit().getSystemClipboard().setContents(Profile,null);		
     	rb.keyPress(KeyEvent.VK_CONTROL);
     	rb.keyPress(KeyEvent.VK_V);		
@@ -72,24 +71,25 @@ public class Utility_Class extends Base_Class{
 //===================================[ Screenshot to extent report ]===============================================
     
     	public static String Capture_Screenshot() {
-//    		WebDriver driver = Base_Class.driver();
 		String Base64Code= ((TakesScreenshot) Base_Class.driver).getScreenshotAs(OutputType.BASE64);	
 		return "data:image/jpg;base64, " +Base64Code ;
 		}	
 
  //===================================[ Toast Message Validation ]=================================================
     	
+
     	public static void Toast_Message_Validation (String Expected_Message) throws Exception  {
-//    		WebDriver driver = Base_Class.();
-    		WebDriverWait wait = new WebDriverWait(Base_Class.driver, Duration.ofSeconds(10)); 
-            WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@class='Toastify']")));
-    		Actual_Message = element.getText();
-    	 	if (!Actual_Message.equalsIgnoreCase(Expected_Message)){
+    		Thread.sleep(2000);
+            WebElement element = driver.findElement(By.xpath("//div[@role='alert']"));
+    		Actual_Message = element.getText().replace("\n", " ").trim();
+    	 	if (!Actual_Message.equals(Expected_Message.trim())){
                 throw new Exception();
             }
     	}
     	
     	
+   	
+    
 }
     	    
     	

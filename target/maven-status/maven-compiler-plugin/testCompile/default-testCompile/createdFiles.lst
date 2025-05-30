@@ -1,1 +1,9 @@
-Test_Package\Login.class
+Super_Admin_Scripts\Active_Client.class
+Bid_Manager_Scripts\Historical_Proposal.class
+Team_Member_Scripts\T_Member_Login.class
+Super_Admin_Scripts\Super_Admin_Login.class
+Super_Admin_Scripts\Add_Client.class
+Bid_Manager_Scripts\Resource_Bank.class
+Bid_Manager_Scripts\B_Manager_Login.class
+Super_Admin_Scripts\Inactive_Client.class
+Admin_Scripts\Admin_Login.class
