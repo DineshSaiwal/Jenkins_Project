@@ -20,7 +20,7 @@ public class Permission extends Base_Class{
 	String jsonResponse;
 
 	public void SessionFetch() throws Exception {
-		
+		Base_Class.driver.navigate().refresh();
 	    BlockingQueue<String> tokenQueue = new ArrayBlockingQueue<>(1);
 
 	    devTools.addListener(Network.responseReceived(), response -> {

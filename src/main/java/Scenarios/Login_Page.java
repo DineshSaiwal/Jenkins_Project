@@ -7,7 +7,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
@@ -42,6 +41,9 @@ public class Login_Page {
 		PWD.sendKeys(Utility_Class.getCellData("Credentials", 3, 1));
 	}
 	
+	public void NewPwd() throws IOException {
+		PWD.sendKeys(Utility_Class.getCellData("Credentials", 4, 1));
+	}
 	
 	@FindBy(xpath = "//span[contains(text(),'Sign in')]") private WebElement SignIn;
 	public void ClickSignIn() {
@@ -50,9 +52,9 @@ public class Login_Page {
 	
 	WebDriverWait wait = new WebDriverWait(Base_Class.driver, Duration.ofSeconds(20));
 
-	public void URL_Validation() {
-	    wait.until(ExpectedConditions.urlToBe("https://qa-bidplan.aptagrim.co/dashboard"));
-	    String actualURL = Base_Class.driver.getCurrentUrl();
+	public void URL_Validation() throws InterruptedException {
+		Thread.sleep(2000);
+		String actualURL = Base_Class.driver.getCurrentUrl();
 	    Assert.assertEquals(actualURL, "https://qa-bidplan.aptagrim.co/dashboard");
 	}
 	

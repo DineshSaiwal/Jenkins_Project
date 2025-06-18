@@ -9,7 +9,6 @@ import java.util.Date;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
-
 import org.apache.commons.mail.EmailException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -54,10 +53,13 @@ public class Base_Class {
 		public static String result;
 		
 		public static  	String reportPath ;
+		public static final String Received_Document = Paths.get(System.getProperty("user.dir"), "Files", "Received_Document.pdf").toString();
+		public static final String Submitted_Document = Paths.get(System.getProperty("user.dir"), "Files", "Submitted_Document.pdf").toString();
+		public static final String Supported_Document = Paths.get(System.getProperty("user.dir"), "Files", "Supporting_Document.docx").toString();
 		
-		  public static final String Received_Document = userdir+"/Files/Received_Document.pdf";
-		  public static final String Submitted_Document = userdir+"/Files/Submitted_Document.pdf";
-		  public static final String Supported_Document = userdir+"/Files/Supporting_Document.docx";
+//		  public static final String Received_Document = userdir+"/Files/Received_Document.pdf";
+//		  public static final String Submitted_Document = userdir+"/Files/Submitted_Document.pdf";
+//		  public static final String Supported_Document = userdir+"/Files/Supporting_Document.docx";
 		  
 		@BeforeSuite
 		public void generateReport() throws IOException{
@@ -80,16 +82,14 @@ public class Base_Class {
 		public void setUp(String url) throws IOException{
 		    ChromeOptions options = new ChromeOptions();
 		    String userDataDir = userdir + "/Chrome user profile/chrome_user_data_" + System.currentTimeMillis();
-		    Files.createDirectories(Paths.get(userDataDir));   
+		    Files.createDirectories(Paths.get(userDataDir));
 			
 			options.addArguments("--headless=new");
-			options.addArguments("--disable-gpu","--disable-dev-shm-usage","--no-sandbox", "user-data-dir=" + userDataDir); 
+			options.addArguments("--disable-gpu","--window-size=1920,1080","--disable-dev-shm-usage","--no-sandbox", "user-data-dir=" + userDataDir); 
 			
 		    driver = new ChromeDriver(options);
 		    browserName = ((ChromeDriver) driver).getCapabilities().getBrowserName();
-		    driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-		    driver.manage().window().maximize();
-		    
+		    driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));		    
 		    devTools = ((ChromeDriver) driver).getDevTools();
 		    devTools.createSession();	
 		    devTools.send(Network.enable(Optional.empty(), Optional.empty(), Optional.empty()));
@@ -164,9 +164,9 @@ public class Base_Class {
 		}
 	
 		
-//		@AfterSuite
+		@AfterSuite
 		public void TearDown() throws EmailException {
 			Java_Mail.sendmail();   
-			System.out.println("Report generated at: " + userdir + reportPath);
+//			System.out.println("Report generated at: " + userdir + reportPath);
 		}
 }

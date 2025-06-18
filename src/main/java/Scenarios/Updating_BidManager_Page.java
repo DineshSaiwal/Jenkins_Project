@@ -55,6 +55,7 @@ public class Updating_BidManager_Page{
 		Email.sendKeys(f.internet().emailAddress());
 	}
 	
+	
 	@FindBy(xpath = "//input[@placeholder='Select']") private WebElement ClickRole;
 	public void ClickRole()  {
 		wait.until(ExpectedConditions.visibilityOf(ClickRole)).click();

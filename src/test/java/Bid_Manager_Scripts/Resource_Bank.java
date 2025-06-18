@@ -5,22 +5,16 @@ import java.awt.Toolkit;
 import java.awt.datatransfer.StringSelection;
 import java.awt.event.KeyEvent;
 import java.io.IOException;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebDriver;
 import org.testng.annotations.Test;
-
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.markuputils.ExtentColor;
 import com.aventstack.extentreports.markuputils.MarkupHelper;
-
 import Base_Package.Base_Class;
 import Base_Package.User_Login;
 import Base_Package.Utility_Class;
-import Scenarios.Historical_Proposal_Page;
-import Scenarios.Login_Page;
 import Scenarios.Resource_Bank_Page;
 
 

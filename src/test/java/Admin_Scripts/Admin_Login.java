@@ -1,5 +1,7 @@
 package Admin_Scripts;
 
+import java.io.IOException;
+
 import org.testng.annotations.Test;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
@@ -11,10 +13,8 @@ import Scenarios.Login_Page;
 
 public class Admin_Login extends Base_Class{
 	ExtentTest test;
-	
-	
 	@Test
-	void Admin_Login_Test() throws InterruptedException {
+	void Admin_Login_Test() throws InterruptedException, IOException {
 		
 		Login_Page pg= new Login_Page(driver);
 	
@@ -50,8 +50,18 @@ public class Admin_Login extends Base_Class{
  				}
 		 
 			
-		 try {pg.URL_Validation();
-		 	test.pass(MarkupHelper.createLabel("Navigated to Dashboad Successfully", ExtentColor.GREEN));} 
+		 Thread.sleep(1000);	
+		 try {String currentUrl = Base_Class.driver.getCurrentUrl();
+			if (!currentUrl.equals("https://qa-bidplan.aptagrim.co/dashboard")) {
+		        Base_Class.driver.navigate().refresh();
+		        Thread.sleep(1000);
+		        pg.Admin_Mail();
+		        pg.NewPwd();
+		        pg.ClickSignIn();
+		    }
+			pg.URL_Validation();
+		 	test.pass(MarkupHelper.createLabel("Navigated to Dashboad Successfully", ExtentColor.GREEN));
+		 	test.addScreenCaptureFromBase64String(Utility_Class.Capture_Screenshot()); } 
 		 catch (AssertionError e) {
 			test.fail(MarkupHelper.createLabel("Failed to Navigate to Dashboad ",  ExtentColor.RED));
 			test.addScreenCaptureFromBase64String(Utility_Class.Capture_Screenshot()); 
